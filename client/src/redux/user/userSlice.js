@@ -64,6 +64,6 @@ const userSlice = createSlice({
 
 
 export const {signInStart, signInSuccess, signInFailure, updateUserFailure, updateUserStart, updateUserSuccess,
-    deleteUserFailure, deleteUserStart,deleteUserSuccess
+    deleteUserFailure, deleteUserStart,deleteUserSuccess, signOutUserFailure, signOutUserStart, signOutUserSuccess
 } = userSlice.actions
 export  default userSlice.reducer;

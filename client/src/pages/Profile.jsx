@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux'
 import { useRef } from 'react'
 import { getStorage, uploadBytesResumable, ref, getDownloadURL } from 'firebase/storage'
 import { app } from '../firebase'
-import {updateUserStart, updateUserSuccess, updateUserFailure, deleteUserFailure, deleteUserStart, deleteUserSuccess} from '../redux/user/userSlice'
+import {updateUserStart, updateUserSuccess, updateUserFailure, deleteUserFailure, deleteUserStart, deleteUserSuccess,
+  signOutUserStart
+} from '../redux/user/userSlice'
 import { useDispatch } from 'react-redux'
 
 
@@ -104,7 +106,7 @@ export default function Profile() {
       }
       dispatch(deleteUserSuccess(data));
     } catch (error) {
-      dispatch(deleteUserFailure(data.message));
+      dispatch(deleteUserFailure(error.message));
     }
   };
 
