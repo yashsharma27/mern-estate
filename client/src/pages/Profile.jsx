@@ -7,6 +7,7 @@ import {updateUserStart, updateUserSuccess, updateUserFailure, deleteUserFailure
   signOutUserStart
 } from '../redux/user/userSlice'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 
 
@@ -143,6 +144,8 @@ export default function Profile() {
         <button disabled={loading} className='bg-slate-500 text-white rounded-lg p-3 uppercase hover:opacity-95'>
           {loading ? 'loading' : 'Update'}
         </button>
+        <Link to={"/create-listing"} className='bg-green-700 text-white p-3 rounded-lg hover:opacity-95 uppercase text-center'> Create Listing
+        </Link>
       </form>
       <div className='flex justify-between mt-5'>
         <span
